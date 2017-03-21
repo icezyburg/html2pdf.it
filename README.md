@@ -1,54 +1,52 @@
-html2pdf.it
+![logo](http://html2pdf.it/favicon-32x32.png) [html2pdf.it](http://www.html2pdf.it)
 ===========
-Using PhantomJS to generate pdfs, via a webservice. Runs using node.js.
+Generate PDFs from any web-page. You need [Node.js](http://nodejs.org) to run it.
 
 See it in action at: [html2pdf.it](http://www.html2pdf.it).
 
-Ready to fork and push to heroku (where I run it).
 
-Works out of the box on both windows and ubuntu.
-
-On Mac you need to
-```
+Works out of the box on both Windows and Ubuntu. On Mac you need to:
+```shell
 brew install phantomjs
 ```
 
-To get started you need to clone the repository, cd to it and run
+To get started you need to clone the repository, cd to it and run:
 -----------
-```
+```shell
 npm install
 ```
 
 Running webserver locally
 -----------
-This also opens your webbrowser on the local webserver
-```
+```shell
 node open.js
 ```
+This also opens your web-browser pointing to your locally running html2pdf.it:
+
 
 Running webserver
 -----------
 ```
-node lib/app.js
+node .
 ```
 If you want to host html2pdf.it yourself, you will have to ask your host if they support hosting Node.js applications.
-Node.js is still new, so a lot of hosts don't support it. 
 
-If your host does not support Node.js. You need to find a new host
-that does. Heroku.com or nodejitsu.com for example.
+If your host does not support Node.js, you'll need to find a new host
+that does. Check out [Heroku](http://heroku.com) or [Nodejitsu](http://nodejitsu.com) for example.
 
 Running tests
 -----------
-```
+```shell
 npm test
 ```
 
-Node modules used
-----------------
-- Routing etc. is done with `express`
-- Testing is done with `mocha`, `chai` and `sinon`, using BDD style tests.
-- JSHint is run on the JavaScript code
+Page breaks
+-----------
+You can use the CSS attribute:
+```css
+page-break-before: always;
+```
 
-Node version
-------------
-Version 0.10+ of node.js is required (Domains are used for catching errors, and domains where not really stable before 0.10)
+License
+-------
+MIT

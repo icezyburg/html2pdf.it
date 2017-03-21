@@ -1,21 +1,24 @@
 {
   "author": "Allan Ebdrup",
   "name": "html2pdf.it",
-  "version": "1.2.8",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Muscula/html2pdf.it"
   },
   "private": false,
   "engines": {
-    "node": "0.10.x"
+    "node": "^7.5",
+    "npm": "^3.10"
   },
   "main": "./lib/app.js",
   "dependencies": {
-    "express": "3.x",
+    "compression": "^1.6.2",
+    "express": "",
+    "morgan": "^1.8.0",
     "node-uuid": "",
     "request": "",
-    "slugify-url": "~1.0"
+    "slugify-url": ""
   },
   "devDependencies": {
     "mocha": "",
@@ -28,7 +31,7 @@
   },
   "scripts": {
     "start": "node ./lib/app.js",
-    "test": "node test.js"
+    "test": "_mocha"
   },
   "subdomain": "html2pdf",
   "gitHead": "af60c5959b545ab6c21d19919e1abb503d33c5f6",
@@ -48,5 +51,5 @@
     "nonsucking",
     "html2pdf"
   ],
-  "license": "Apache 2"
+  "license": "MIT"
 }
